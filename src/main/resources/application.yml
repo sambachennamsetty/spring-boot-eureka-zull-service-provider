@@ -1,0 +1,11 @@
+server:
+  port: 9763
+spring:
+  application:
+    name: SERVICE-PROVIDER
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
